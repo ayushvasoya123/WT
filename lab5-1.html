@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+    <style> 
+        .table{
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            padding-top: 200px;
+            height: 100vh;
+            border-color:   white;
+        }
+
+
+
+
+    </style>
+
+
+
+
+</head>
+<body>
+
+    <div class="container" style="padding-top: 100px; margin-left: 310px;" >
+
+        <table border="0" >
+            <tr>
+                <td colspan="5"> 
+                    <input style ="text-align: right; border-color: black"  type="text" id="result"  >
+                    <td><input type="button" value="C" onclick="clearNum('c')"></td>
+                    <td><input type="button" value="x" onclick="oneClearNum('x')"></td>
+                </td>
+            </tr>
+
+            <tr>
+                <td><input type="button" value="7" onclick="addNumber('7')"></td>
+                <td><input type="button" value="8" onclick="addNumber('8')"></td>
+                <td><input type="button" value="9" onclick="addNumber('9')"></td>
+                <td><input type="button" value="+" onclick="addNumber('+')"></td>
+
+            </tr>
+
+            <tr>
+                <td><input type="button" value="4" onclick="addNumber('4')"></td>
+                <td><input type="button" value="5" onclick="addNumber('5')"></td>
+                <td><input type="button" value="6" onclick="addNumber('6')"></td>
+                <td><input type="button" value="-" onclick="addNumber('-')"></td>     
+            </tr>
+
+            <tr>
+        
+                <td><input type="button" value="1" onclick="addNumber('1')"></td>
+                <td><input type="button" value="2" onclick="addNumber('2')"></td>
+                <td><input type="button" value="3" onclick="addNumber('3')"></td>
+                <td><input type="button" value="*" onclick="addNumber('*')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="." onclick="addNumber('.')"></td>
+                <td><input type="button" value="0" onclick="addNumber('0')"></td>
+                <td><input type="button" value="=" onclick="finalAns('=')"></td>
+                <td><input type="button" value="/" onclick="addNumber('/')"></td>
+            </tr>
+    
+        </table>
+    </div>
+    </table>
+    </div>
+
+    <script>
+
+        function addNumber(value) {
+        ans = document.getElementById('result')
+        ans.value += value
+        }
+        function finalAns(){
+        ans = document.getElementById('result')
+        disp =eval(ans.value);
+        ans.value = disp
+        }
+        function clearNum() {
+        clr =  document.getElementById('result')
+        clr.value = " "
+        }
+        function oneClearNum(){
+            oneclr =  document.getElementById('result')
+            oneclr.value = oneclr.value.substring(0, oneclr.value.length - 1)
+
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,77 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MOUSE EVENT ON HEADING</title>
+    <style>
+      body {
+        height: 100vh;
+      }
+      h1 {
+        color: greenyellow;
+        
+        display: flex ;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid green;
+      }
+      div{
+       
+        
+        height: 25px;
+
+      }
+      button{
+        width: 90px;
+        height: 33px;
+        font-size: 16px;
+        outline: none;
+        border: none;
+        margin: 5px;
+        border-radius: 4px;
+        box-shadow: 5px 5px 8px #00000020,
+                -5px -5px 8px #ffffff;
+         transition: .3s;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="xy">
+        <h1 id="abc" onmouseover="ab()" onmouseout="xyz()">My heading</h1>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div>
+        <button class="btn" id="red1" onclick="red()">Red</button>
+        <button class="btn" id="yellow1" onclick="Yellow()">Yellow</button>
+        <button class="btn" id="green1" onclick="Green()">Green</button>
+        <button class="btn" id="blue1" onclick="Blue()">Blue</button>
+    </div>
+   
+    <script>
+      function ab() {
+        document.getElementById("abc").style.backgroundColor = "blue";
+        document.getElementById("abc").style.fontSize = 100+'px';
+       
+      }
+      function xyz() {
+        document.getElementById("abc").style.backgroundColor = "white";
+        document.getElementById("abc").style.fontSize = 50+'px';
+      }
+      function red() {
+        document.getElementById("abc").style.backgroundColor = "red";
+      }
+      function Yellow() {
+        document.getElementById("abc").style.backgroundColor = "yellow";
+      }
+      function Green() {
+        document.getElementById("abc").style.backgroundColor = "green";
+      }
+      function Blue() {
+        document.getElementById("abc").style.backgroundColor = "blue";
+      }
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab_6_c</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <script>
+        document.addEventListener("keydown",(e) =>{
+        if(e.key == "a" || e.key == 'e' || e.key == "i" || e.key == 'o'|| e.key == 'u'){    
+            Swal.fire(" This is vowel");
+
+        }
+        else{
+            Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Please anter a vowel !",
+            footer: '<a href="#">Why do I have this issue?</a>'
+});
+        }
+    });
+
+    </script>
+    
+</body>
+</html>
